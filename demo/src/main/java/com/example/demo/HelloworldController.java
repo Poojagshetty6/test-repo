@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,4 +15,10 @@ public class HelloworldController {
 	public ResponseEntity<String> hello() {
 		return new ResponseEntity<>("Hello World", HttpStatus.OK);
 	}
+	
+	@PostMapping
+	public ResponseEntity<?> createData() {
+		return new ResponseEntity<>("Created", HttpStatus.CREATED);
+	}
+	
 }
